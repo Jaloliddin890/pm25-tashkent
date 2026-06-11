@@ -1,0 +1,62 @@
+[
+  {
+    "feature": "pm25_lag_1h",
+    "importance": 0.5599689483642578
+  },
+  {
+    "feature": "pm25_roll_3h",
+    "importance": 0.1875307857990265
+  },
+  {
+    "feature": "pm25_lag_2h",
+    "importance": 0.06418955326080322
+  },
+  {
+    "feature": "pm25_lag_3h",
+    "importance": 0.01254622358828783
+  },
+  {
+    "feature": "pm25_roll_24h",
+    "importance": 0.011588867753744125
+  },
+  {
+    "feature": "hour_sin",
+    "importance": 0.011032904498279095
+  },
+  {
+    "feature": "hour_cos",
+    "importance": 0.010789772495627403
+  },
+  {
+    "feature": "pm25_lag_24h",
+    "importance": 0.010606707073748112
+  },
+  {
+    "feature": "month_sin",
+    "importance": 0.010169795714318752
+  },
+  {
+    "feature": "pm25_roll_6h",
+    "importance": 0.009468303062021732
+  },
+  {
+    "feature": "surface_pressure",
+    "importance": 0.009040295146405697
+  },
+  {
+    "feature": "wind_u",
+    "importance": 0.008694135583937168
+  },
+  {
+    "feature": "month_cos",
+    "importance": 0.008579474873840809
+  },
+  {
+    "feature": "dow_cos",
+    "importance": 0.008455716073513031
+  },
+  {
+    "feature": "pm25_lag_12h",
+    "importance": 0.008369446732103825
+  }
+]

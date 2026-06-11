@@ -1,0 +1,40 @@
+ZIP FAYL YARATISH YO'RIQNOMASI
+================================
+
+ZIP fayl nomi: PM25_Tashkent_Temirov.zip
+
+KERAKLI STRUKTURA:
+PM25_Tashkent_Temirov.zip
+├── Report.docx                    ← report yozilgandan keyin qo'shasiz
+├── Presentation.pptx              ← slides qilgandan keyin qo'shasiz
+├── User_Manual.pdf                ← User_Manual.md dan PDF export qiling
+├── README.txt                     ← tayyor (pm25_project/README.txt)
+└── Source_Code/
+    ├── backend/                   ← service1/ + service2_api/ barcha fayllar
+    │   ├── service1/
+    │   │   ├── *.py (fetch_data, preprocess, evaluate, predict, train_*)
+    │   │   ├── models/            ← .pkl, .keras, .json modellar
+    │   │   └── requirements.txt
+    │   └── service2_api/
+    │       └── *.py
+    ├── frontend/                  ← dashboard/ papkasi (node_modules SHART EMAS)
+    │   ├── src/
+    │   ├── package.json
+    │   └── vite.config.js
+    └── database/                  ← service1/data/ papkasidagi CSV fayllar
+        ├── tashkent_pm25_weather.csv
+        ├── processed.csv
+        ├── train.csv
+        ├── test.csv
+        └── feature_cols.json
+
+MUHIM ESLATMALAR:
+- node_modules/ papkasini ZIP ga KIRITMANG (juda katta)
+- outputs/predictions.json ni kiriting (dashboard uchun kerak)
+- __pycache__/ kiritmasa ham bo'ladi
+- models/ papkasini albatta kiriting (trained modellar)
+
+WINDOWS DA ZIP YARATISH:
+1. Desktop ga "PM25_Tashkent_Temirov" nomli papka oching
+2. Yuqoridagi strukturaga ko'ra fayllarni joylashtiring
+3. Papkani o'ng klik -> "Send to" -> "Compressed (zipped) folder"

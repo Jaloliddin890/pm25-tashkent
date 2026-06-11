@@ -1,0 +1,39 @@
+# Dependencies
+dashboard/node_modules/
+dashboard/dist/
+dashboard/.vite/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.env
+
+# Virtual environments
+lstm_env/
+venv/
+env/
+
+# Large model file (107MB — exceeds GitHub 100MB limit)
+# Regenerate with: python service1/train_models.py
+service1/models/random_forest.pkl
+
+# Generated outputs (rebuild with pipeline)
+service1/outputs/predictions.json
+service1/outputs/predictions.csv
+service1/outputs/xgb_es_analysis/
+service1/outputs/lstm_nolags_analysis/
+
+# Raw downloaded data (regenerate with fetch_data.py)
+service1/data/tashkent_pm25_weather.csv
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Claude Code local settings
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db

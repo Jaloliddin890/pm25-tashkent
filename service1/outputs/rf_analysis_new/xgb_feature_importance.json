@@ -1,0 +1,62 @@
+[
+  {
+    "feature": "pm25_lag_1h",
+    "importance": 0.2809619688307316
+  },
+  {
+    "feature": "pm25_roll_3h",
+    "importance": 0.15119317611531014
+  },
+  {
+    "feature": "pm25_lag_2h",
+    "importance": 0.13121063839224348
+  },
+  {
+    "feature": "pm25_roll_6h",
+    "importance": 0.09618718338605398
+  },
+  {
+    "feature": "pm25_roll_24h",
+    "importance": 0.07981610029962294
+  },
+  {
+    "feature": "pm25_lag_3h",
+    "importance": 0.07433960837527326
+  },
+  {
+    "feature": "pm25_lag_6h",
+    "importance": 0.03409873600128183
+  },
+  {
+    "feature": "pm25_lag_24h",
+    "importance": 0.026355571612093325
+  },
+  {
+    "feature": "pm25_roll_7d",
+    "importance": 0.023288322969332545
+  },
+  {
+    "feature": "pm25_lag_12h",
+    "importance": 0.01589888540560758
+  },
+  {
+    "feature": "pm25_lag_48h",
+    "importance": 0.013508878360249183
+  },
+  {
+    "feature": "temperature_2m",
+    "importance": 0.0115854488559906
+  },
+  {
+    "feature": "surface_pressure",
+    "importance": 0.01088625514512772
+  },
+  {
+    "feature": "relative_humidity_2m",
+    "importance": 0.008456728652465679
+  },
+  {
+    "feature": "wind_speed_10m",
+    "importance": 0.006086746163157293
+  }
+]
