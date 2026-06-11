@@ -190,10 +190,15 @@ def main():
     print(f"[Predict] Generating {forecast_hours}h forecast — RF + XGBoost + LSTM (No Lags) ...")
 
     # RF
-    with open(os.path.join(MODELS_DIR, "random_forest.pkl"), "rb") as f:
-        rf_model = pickle.load(f)
-    fc_rf = forecast_xgb_rf(rf_model, X_all, feature_cols, processed_df, forecast_hours)
-    print(f"  RF    : {fc_rf[0]['pm25_forecast']} ... {fc_rf[-1]['pm25_forecast']} ug/m3")
+    rf_path = os.path.join(MODELS_DIR, "random_forest.pkl")
+    if os.path.exists(rf_path):
+        with open(rf_path, "rb") as f:
+            rf_model = pickle.load(f)
+        fc_rf = forecast_xgb_rf(rf_model, X_all, feature_cols, processed_df, forecast_hours)
+        print(f"  RF    : {fc_rf[0]['pm25_forecast']} ... {fc_rf[-1]['pm25_forecast']} ug/m3")
+    else:
+        fc_rf = []
+        print("  RF    : skipped (model file not found)")
 
     # XGBoost
     import xgboost as xgblib

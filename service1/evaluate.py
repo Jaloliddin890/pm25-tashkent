@@ -65,7 +65,10 @@ def compute_metrics(y_true, y_pred, model_name: str) -> dict:
 # ── Load Models ───────────────────────────────────────────────────────────────
 
 def load_rf():
-    with open(os.path.join(MODELS_DIR, "random_forest.pkl"), "rb") as f:
+    path = os.path.join(MODELS_DIR, "random_forest.pkl")
+    if not os.path.exists(path):
+        return None
+    with open(path, "rb") as f:
         return pickle.load(f)
 
 def load_xgb():
@@ -122,8 +125,13 @@ def main():
 
     # ── Random Forest ─────────────────────────────────────────────────────────
     rf = load_rf()
-    rf_preds = rf.predict(X_test)
-    rf_metrics = compute_metrics(y_test, rf_preds, "Random Forest")
+    if rf is not None:
+        rf_preds = rf.predict(X_test)
+        rf_metrics = compute_metrics(y_test, rf_preds, "Random Forest")
+    else:
+        print("  Random Forest  skipped (model not found)")
+        rf_preds = np.full(len(y_test), np.nan)
+        rf_metrics = {"model": "Random Forest", "rmse": None, "mae": None, "r2": None}
 
     # ── XGBoost ───────────────────────────────────────────────────────────────
     xgb_model = load_xgb()

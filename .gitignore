@@ -20,10 +20,8 @@ env/
 service1/models/random_forest.pkl
 
 # Generated outputs (rebuild with pipeline)
-service1/outputs/predictions.json
 service1/outputs/predictions.csv
 service1/outputs/xgb_es_analysis/
-service1/outputs/lstm_nolags_analysis/
 
 # Raw downloaded data (regenerate with fetch_data.py)
 service1/data/tashkent_pm25_weather.csv
