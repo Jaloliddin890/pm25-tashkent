@@ -100,8 +100,8 @@ async def lifespan(app: FastAPI):
     state.store = _load_store()
 
     scheduler = AsyncIOScheduler()
-    scheduler.add_job(save_waqi_job, "interval", hours=1, id="waqi_save")
-    scheduler.add_job(refresh_data,  "interval", hours=3, id="refresh")
+    scheduler.add_job(save_waqi_job, "interval", hours=1,  id="waqi_save", next_run_time=datetime.now(timezone.utc))
+    scheduler.add_job(refresh_data,  "interval", hours=3,  id="refresh")
     scheduler.start()
     print("[API] APScheduler started — WAQI every 1h, full refresh every 3h.")
 
